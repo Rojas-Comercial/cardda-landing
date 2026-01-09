@@ -13,7 +13,7 @@ export function LandingPage() {
       <nav className="absolute top-0 left-0 right-0 z-50 py-6 bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <a href="#">
-            <img src="/cardda-landing/logo.svg" alt="Cardda" className="h-8" />
+            <img src="/cardda-landing/logo.svg" alt="Cardda" className="h-15" />
           </a>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
