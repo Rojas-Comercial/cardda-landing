@@ -12,9 +12,9 @@ export function LandingPage() {
       {/* Navigation */}
       <nav className="absolute top-0 left-0 right-0 z-50 py-6">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="text-2xl font-bold text-white tracking-tight">
-            Card<span className="text-[#fa7210]">da</span>
-          </div>
+          <a href="#">
+            <img src="/cardda-landing/logo-white.svg" alt="Cardda" className="h-8" />
+          </a>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               Producto
