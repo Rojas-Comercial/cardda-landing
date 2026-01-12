@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function ProductPage() {
   return (
     <div className="min-h-screen bg-white text-[#151515] pt-20">
