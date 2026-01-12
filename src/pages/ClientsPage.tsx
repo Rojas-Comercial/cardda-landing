@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Play, Building2, TrendingUp, Users, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Datos de casos de éxito con videos
 const successCases = [
@@ -63,25 +64,25 @@ export function ClientsPage() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 h-20 bg-white/80 backdrop-blur-sm border-b border-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center">
-          <a href="/">
+          <Link to="/">
             <img src="/cardda-landing/logo.svg" alt="Cardda" className="h-12" />
-          </a>
+          </Link>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+            <Link to="/" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Inicio
-            </a>
-            <a href="/producto" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+            </Link>
+            <Link to="/producto" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Producto
-            </a>
-            <a href="/clientes" className="text-[#151515] font-semibold text-sm">
+            </Link>
+            <Link to="/clientes" className="text-[#151515] font-semibold text-sm">
               Clientes
-            </a>
-            <a href="/precios" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+            </Link>
+            <Link to="/precios" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Precios
-            </a>
-            <a href="/blog" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+            </Link>
+            <Link to="/blog" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Blog
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

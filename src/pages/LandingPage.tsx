@@ -5,27 +5,28 @@ import { ReimbursementFlow } from '../components/ReimbursementFlow';
 import { IntegrationsSection } from '../components/IntegrationsSection';
 import { PricingSection } from '../components/PricingSection';
 import { FinalCTA } from '../components/FinalCTA';
+import { Link } from 'react-router-dom';
 export function LandingPage() {
   return <div className="min-h-screen bg-white text-[#151515]">
       {/* Navigation */}
       <nav className="absolute top-0 left-0 right-0 z-50 h-20 bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <a href="/">
+          <Link to="/">
             <img src="/cardda-landing/logo.svg" alt="Cardda" className="h-18" />
-          </a>
+          </Link>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/producto" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+            <Link to="/producto" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Producto
-            </a>
-            <a href="/clientes" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+            </Link>
+            <Link to="/clientes" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Clientes
-            </a>
-            <a href="/precios" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+            </Link>
+            <Link to="/precios" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Precios
-            </a>
-            <a href="/blog" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+            </Link>
+            <Link to="/blog" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Blog
-            </a>
+            </Link>
             <a href="https://app.cardda.com/login" className="inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-lg h-9 px-4 text-sm text-[#38424e] hover:bg-[#38424e]/10 hover:text-[#151515]">
               Ingresar
             </a>

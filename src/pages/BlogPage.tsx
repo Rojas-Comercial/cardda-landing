@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function BlogPage() {
   return (
@@ -19,7 +19,7 @@ export function BlogPage() {
           </a>
         </div>
         <div className="text-center mt-8">
-          <a href="/" className="text-[#fa7210] hover:underline">Volver al inicio</a>
+          <Link to="/" className="text-[#fa7210] hover:underline">Volver al inicio</Link>
         </div>
       </div>
     </div>
