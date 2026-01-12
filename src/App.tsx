@@ -4,6 +4,7 @@ import { LandingPage } from './pages/LandingPage';
 import { ProductPage } from './pages/ProductPage';
 import { ClientsPage } from './pages/ClientsPage';
 import { PricingPage } from './pages/PricingPage';
+import { BlogPage } from './pages/BlogPage';
 
 export function App() {
   return (
@@ -12,6 +13,7 @@ export function App() {
       <Route path="/producto" element={<ProductPage />} />
       <Route path="/clientes" element={<ClientsPage />} />
       <Route path="/precios" element={<PricingPage />} />
+      <Route path="/blog" element={<BlogPage />} />
     </Routes>
   );
 }

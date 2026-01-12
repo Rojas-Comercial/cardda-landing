@@ -24,6 +24,9 @@ export function LandingPage() {
             <a href="/precios" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Precios
             </a>
+            <a href="/blog" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+              Blog
+            </a>
             <a href="https://app.cardda.com/login" className="inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-lg h-9 px-4 text-sm text-[#38424e] hover:bg-[#38424e]/10 hover:text-[#151515]">
               Ingresar
             </a>
