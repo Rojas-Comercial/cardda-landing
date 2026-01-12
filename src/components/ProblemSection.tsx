@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FileX, AlertCircle, Clock } from 'lucide-react';
 export function ProblemSection() {
-  return <section className="py-20 bg-white">
+  return <section id="problema" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <motion.h2 className="text-3xl sm:text-4xl font-bold text-[#151515] mb-6" initial={{

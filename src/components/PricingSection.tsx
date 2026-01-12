@@ -5,7 +5,7 @@ import { Card } from './ui/Card';
 import { motion } from 'framer-motion';
 export function PricingSection() {
   const [activeTab, setActiveTab] = useState<'cards' | 'operations'>('cards');
-  return <section className="py-24 bg-[#f9fafc]">
+  return <section id="precios" className="py-24 bg-[#f9fafc]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#151515] mb-4">

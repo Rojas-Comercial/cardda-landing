@@ -54,7 +54,7 @@ const benefitsEmployee = [
 
 export function ReimbursementFlow() {
   return (
-    <section className="py-24 bg-[#151515] text-white overflow-hidden">
+    <section id="flujo" className="py-24 bg-[#151515] text-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16 text-center">

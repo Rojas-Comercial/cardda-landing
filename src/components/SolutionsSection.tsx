@@ -22,7 +22,7 @@ const solutions = [{
   bg: 'bg-[#fa7210]/10'
 }];
 export function SolutionsSection() {
-  return <section className="py-24 bg-[#f9fafc]">
+  return <section id="soluciones" className="py-24 bg-[#f9fafc]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span className="text-[#fa7210] font-semibold tracking-wider uppercase text-sm" initial={{

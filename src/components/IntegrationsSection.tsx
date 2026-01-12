@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Shield, Lock } from 'lucide-react';
 const erps = ['Defontana', 'Softland', 'Nubox', 'SAP'];
 export function IntegrationsSection() {
-  return <section className="py-20 bg-white border-t border-gray-200">
+  return <section id="integraciones" className="py-20 bg-white border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#151515] mb-4">

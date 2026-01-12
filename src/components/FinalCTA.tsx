@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/Button';
 export function FinalCTA() {
-  return <section className="py-24 bg-[#151515] relative overflow-hidden">
+  return <section id="cta" className="py-24 bg-[#151515] relative overflow-hidden">
       {/* Abstract Shapes */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#fa7210] rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#38424e] rounded-full blur-[100px] opacity-30 pointer-events-none"></div>

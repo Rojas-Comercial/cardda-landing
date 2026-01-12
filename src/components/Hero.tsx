@@ -5,7 +5,7 @@ import { Button } from './ui/Button';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-20 pb-24 lg:pt-32 lg:pb-40">
+    <section id="hero" className="relative overflow-hidden bg-white pt-20 pb-24 lg:pt-32 lg:pb-40">
       {/* Background Gradients */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden z-0 pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-[#fa7210]/5 blur-[100px]" />
