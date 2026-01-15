@@ -40,8 +40,8 @@ export function Hero() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-                <Button size="lg" icon={ArrowRight}>
-                  Empezar prueba gratis
+                <Button size="lg" icon={ArrowRight} onClick={() => window.open('https://meetings.hubspot.com/arturo-hobaica/arturocardda?uuid=321bfd66-4234-492f-978b-1b5d493726eb', '_blank')}>
+                  Agendar una reunión
                 </Button>
                 <Button
                   variant="outline"

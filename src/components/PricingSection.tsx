@@ -181,8 +181,8 @@ export function PricingSection() {
                   </div>
                 </div>
 
-                <Button variant="primary" className="w-full" size="lg">
-                  Comenzar Prueba Gratis
+                <Button variant="primary" className="w-full" size="lg" onClick={() => window.location.href = 'https://www.cardda.com/onboarding'}>
+                  Crear cuenta gratis
                 </Button>
               </Card>
             </div>
@@ -352,7 +352,7 @@ export function PricingSection() {
                   </div>
                 </div>
 
-                <Button variant="primary" className="w-full" size="lg">
+                <Button variant="primary" className="w-full" size="lg" onClick={() => window.open('https://meetings.hubspot.com/arturo-hobaica/arturocardda?uuid=a64cbc53-86db-4afe-830a-459fb7b5e770', '_blank')}>
                   Hablar con Ventas
                 </Button>
               </Card>

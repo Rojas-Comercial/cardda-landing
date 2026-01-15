@@ -154,10 +154,10 @@ export function ProductPage() {
             <Link to="/blog" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Blog
             </Link>
-            <a href="https://app.cardda.com/login" className="text-[#38424e] hover:text-[#151515] text-sm font-medium">
+            <a href="https://www.cardda.com/login" className="text-[#38424e] hover:text-[#151515] text-sm font-medium">
               Ingresar
             </a>
-            <a href="https://app.cardda.com/signup" className="bg-[#fa7210] text-white hover:bg-[#e86609] px-4 py-2 rounded-lg text-sm font-medium">
+            <a href="https://www.cardda.com/onboarding" className="bg-[#fa7210] text-white hover:bg-[#e86609] px-4 py-2 rounded-lg text-sm font-medium">
               Crear Cuenta
             </a>
           </div>
@@ -289,12 +289,12 @@ export function ProductPage() {
                 <p className="text-3xl font-bold mb-4">{currentProduct.pricing}</p>
                 <p className="text-white/80 mb-6">Sin costos ocultos. Cancela cuando quieras.</p>
                 <a
-                  href="https://meetings.hubspot.com/cristobalg/cardda"
+                  href="https://meetings.hubspot.com/arturo-hobaica/arturocardda?uuid=321bfd66-4234-492f-978b-1b5d493726eb"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-[#fa7210] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Agendar demo
+                  Agendar reunión
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
@@ -376,19 +376,19 @@ export function ProductPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://app.cardda.com/signup"
+              href="https://www.cardda.com/onboarding"
               className="inline-flex items-center justify-center gap-2 bg-[#fa7210] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#e86609] transition-colors"
             >
               Crear cuenta gratis
               <ChevronRight className="w-5 h-5" />
             </a>
             <a
-              href="https://meetings.hubspot.com/cristobalg/cardda"
+              href="https://meetings.hubspot.com/arturo-hobaica/arturocardda?uuid=321bfd66-4234-492f-978b-1b5d493726eb"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors"
             >
-              Agendar demo
+              Agendar reunión
               <ExternalLink className="w-5 h-5" />
             </a>
           </div>

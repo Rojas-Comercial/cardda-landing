@@ -17,7 +17,7 @@ export function FinalCTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" variant="primary" icon={ArrowRight}>
+          <Button size="lg" variant="primary" icon={ArrowRight} onClick={() => window.location.href = 'https://www.cardda.com/onboarding'}>
             Crear cuenta gratis
           </Button>
           <Button size="lg" variant="secondary">

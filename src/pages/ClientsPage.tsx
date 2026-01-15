@@ -8,7 +8,7 @@ const successCases = [
     name: 'Kaufmann',
     industry: 'Retail Automotriz',
     description: 'Kaufmann automatizó sus pagos con tarjetas corporativas, reduciendo tiempos de gestión y mejorando el control de gastos.',
-    videoUrl: 'https://blog.cardda.com/caso-de-exito-kaufmann/',
+    videoUrl: 'https://youtu.be/OIyeo5yqw78?si=jQqTlgL_uUPyRyPF',
     logo: '/cardda-landing/logos/kaufmann.png',
     quote: '"Con Cardda simplificamos todos nuestros procesos de pago"'
   },
@@ -16,7 +16,7 @@ const successCases = [
     name: 'Punto Ticket',
     industry: 'Entretenimiento',
     description: 'Punto Ticket optimizó la gestión de pagos a proveedores y reembolsos para sus eventos masivos.',
-    videoUrl: 'https://blog.cardda.com/caso-de-exito-punto-ticket/',
+    videoUrl: 'https://youtu.be/PLJxPrZUcyQ?si=dFceRpCPf3UobPQK',
     logo: '/cardda-landing/logos/punto-ticket.png',
     quote: '"Cardda nos permite escalar sin perder el control"'
   },
@@ -24,7 +24,7 @@ const successCases = [
     name: 'AFP Uno',
     industry: 'Servicios Financieros',
     description: 'AFP Uno implementó transferencias automatizadas para sus operaciones de pago masivo.',
-    videoUrl: 'https://blog.cardda.com/caso-de-exito-afp-uno/',
+    videoUrl: 'https://youtu.be/PkceJaXdJ38?si=XWd3Lflqi_1eQad8',
     logo: '/cardda-landing/logos/afp-uno.png',
     quote: '"La automatización de Cardda transformó nuestra operación"'
   }
@@ -152,7 +152,8 @@ export function ClientsPage() {
                   href={case_.videoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block relative bg-gradient-to-br from-[#fa7210] to-[#ff9548] aspect-video flex items-center justify-center group"
+                  className="block relative aspect-video flex items-center justify-center group"
+                  style={{ backgroundImage: `url(https://img.youtube.com/vi/${case_.videoUrl.split('/').pop().split('?')[0]}/maxresdefault.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
                   <div className="relative z-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -221,15 +222,15 @@ export function ClientsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Únete a las empresas que ya usan Cardda</h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-            Agenda una demo y descubre cómo podemos ayudarte a optimizar tus pagos
+            Agenda una reunión y descubre cómo podemos ayudarte a optimizar tus pagos
           </p>
           <a
-            href="https://meetings.hubspot.com/cristobalg/cardda"
+            href="https://meetings.hubspot.com/arturo-hobaica/arturocardda?uuid=321bfd66-4234-492f-978b-1b5d493726eb"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 bg-[#fa7210] text-white font-semibold rounded-lg hover:bg-[#e86609] transition-colors"
           >
-            Agendar Demo
+            Agendar Reunión
           </a>
         </div>
       </section>
