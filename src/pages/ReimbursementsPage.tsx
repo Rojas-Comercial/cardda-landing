@@ -159,7 +159,8 @@ export function ReimbursementsPage() {
 
               {/* Left: Zapier-style wheel */}
               <div className="flex items-center justify-center lg:flex-1">
-                <div className="relative w-[440px] h-[440px] scale-[0.65] sm:scale-[0.8] lg:scale-100 origin-center">
+                <div className="relative w-[265px] h-[265px] sm:w-[330px] sm:h-[330px] lg:w-[440px] lg:h-[440px]">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[440px] h-[440px] scale-[0.6] sm:scale-[0.75] lg:scale-100 origin-center">
 
                   {/* Static outer ring */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full border border-gray-200" />
@@ -247,6 +248,7 @@ export function ReimbursementsPage() {
                     );
                   })}
 
+                </div>
                 </div>
               </div>
 
