@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Play, Building2, TrendingUp, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 // Datos de casos de éxito con videos
 const successCases = [
@@ -59,6 +60,8 @@ const metrics = [
 ];
 
 export function ClientsPage() {
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white text-[#151515]">
       {/* Navigation */}
@@ -71,9 +74,34 @@ export function ClientsPage() {
             <Link to="/" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Inicio
             </Link>
-            <Link to="/producto" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
-              Producto
-            </Link>
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsProductDropdownOpen(true)}
+              onMouseLeave={() => setIsProductDropdownOpen(false)}
+            >
+              <Link to="/producto" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
+                Producto
+              </Link>
+              {isProductDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50"
+                  onMouseEnter={() => setIsProductDropdownOpen(true)}
+                >
+                  <Link to="/producto" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Tarjetas prepago para empresas
+                  </Link>
+                  <Link to="/producto" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Cuentas por pagar
+                  </Link>
+                  <Link to="/producto" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Transferencias bancarias
+                  </Link>
+                  <Link to="/reembolsos" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Reembolsos
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link to="/clientes" className="text-[#151515] font-semibold text-sm">
               Clientes
             </Link>

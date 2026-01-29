@@ -207,7 +207,7 @@ export function Hero() {
               >
                 {/* Card Image */}
                 <img
-                  src="/cardda-landing/card.svg"
+                  src="/cardda-landing/Cardda.svg"
                   alt="Cardda Corporate Card"
                   className="w-full h-full object-cover"
                 />

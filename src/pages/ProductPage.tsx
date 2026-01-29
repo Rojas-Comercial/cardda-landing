@@ -131,6 +131,7 @@ const integrations = [
 
 export function ProductPage() {
   const [activeProduct, setActiveProduct] = useState('tarjetas');
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
   const currentProduct = products.find(p => p.id === activeProduct)!;
 
   return (
@@ -142,9 +143,34 @@ export function ProductPage() {
             <img src="/cardda-landing/logo.svg" alt="Cardda" className="h-18" />
           </Link>
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/producto" className="text-[#fa7210] font-medium text-sm">
-              Producto
-            </Link>
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsProductDropdownOpen(true)}
+              onMouseLeave={() => setIsProductDropdownOpen(false)}
+            >
+              <Link to="/producto" className="text-[#fa7210] font-medium text-sm">
+                Producto
+              </Link>
+              {isProductDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50"
+                  onMouseEnter={() => setIsProductDropdownOpen(true)}
+                >
+                  <Link to="/producto" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Tarjetas prepago para empresas
+                  </Link>
+                  <Link to="/producto" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Cuentas por pagar
+                  </Link>
+                  <Link to="/producto" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Transferencias bancarias
+                  </Link>
+                  <Link to="/reembolsos" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Reembolsos
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link to="/clientes" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
               Clientes
             </Link>

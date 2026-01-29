@@ -4,6 +4,7 @@ import { ProductPage } from './pages/ProductPage';
 import { ClientsPage } from './pages/ClientsPage';
 import { PricingPage } from './pages/PricingPage';
 import { BlogPage } from './pages/BlogPage';
+import { ReimbursementsPage } from './pages/ReimbursementsPage';
 
 export function App() {
   return (
@@ -13,6 +14,7 @@ export function App() {
       <Route path="/clientes" element={<ClientsPage />} />
       <Route path="/precios" element={<PricingPage />} />
       <Route path="/blog" element={<BlogPage />} />
+      <Route path="/reembolsos" element={<ReimbursementsPage />} />
     </Routes>
   );
 }
