@@ -16,8 +16,6 @@ export function ReimbursementsPage() {
   const [selectedErp, setSelectedErp] = useState<number | null>(null);
   const [ocrVisible, setOcrVisible] = useState(false);
   const ocrRef = useRef<HTMLDivElement>(null);
-  const dropdownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
   useEffect(() => {
     if (selectedErp !== null) return;
     const interval = setInterval(() => {
@@ -25,24 +23,6 @@ export function ReimbursementsPage() {
     }, 2500);
     return () => clearInterval(interval);
   }, [selectedErp]);
-
-  // Close dropdown on scroll
-  useEffect(() => {
-    if (!isProductDropdownOpen) return;
-    const handleScroll = () => setIsProductDropdownOpen(false);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isProductDropdownOpen]);
-
-  // Auto-close dropdown after 2 seconds
-  useEffect(() => {
-    if (isProductDropdownOpen) {
-      dropdownTimerRef.current = setTimeout(() => setIsProductDropdownOpen(false), 2000);
-    }
-    return () => {
-      if (dropdownTimerRef.current) clearTimeout(dropdownTimerRef.current);
-    };
-  }, [isProductDropdownOpen]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -69,41 +49,29 @@ export function ReimbursementsPage() {
           <div className="hidden md:flex items-center space-x-8">
             <div
               className="relative"
-              onMouseEnter={() => {
-                setIsProductDropdownOpen(true);
-                if (dropdownTimerRef.current) clearTimeout(dropdownTimerRef.current);
-              }}
-              onMouseLeave={() => {
-                dropdownTimerRef.current = setTimeout(() => setIsProductDropdownOpen(false), 2000);
-              }}
+              onMouseEnter={() => setIsProductDropdownOpen(true)}
+              onMouseLeave={() => setIsProductDropdownOpen(false)}
             >
-              <button
-                onClick={() => setIsProductDropdownOpen(prev => !prev)}
-                className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium"
-              >
+              <Link to="/producto" className="text-[#38424e] hover:text-[#151515] transition-colors text-sm font-medium">
                 Producto
-              </button>
+              </Link>
               {isProductDropdownOpen && (
                 <div
-                  className="absolute top-full left-0 pt-2 z-50"
-                  onMouseEnter={() => {
-                    if (dropdownTimerRef.current) clearTimeout(dropdownTimerRef.current);
-                  }}
+                  className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50"
+                  onMouseEnter={() => setIsProductDropdownOpen(true)}
                 >
-                  <div className="w-64 bg-white border border-gray-200 rounded-lg shadow-lg py-2">
-                    <Link to="/producto" onClick={() => setIsProductDropdownOpen(false)} className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
-                      Tarjetas prepago para empresas
-                    </Link>
-                    <Link to="/producto" onClick={() => setIsProductDropdownOpen(false)} className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
-                      Cuentas por pagar
-                    </Link>
-                    <Link to="/producto" onClick={() => setIsProductDropdownOpen(false)} className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
-                      Transferencias bancarias
-                    </Link>
-                    <Link to="/reembolsos" onClick={() => setIsProductDropdownOpen(false)} className="block px-4 py-2 text-sm text-[#fa7210] hover:bg-gray-100 font-medium">
-                      Reembolsos
-                    </Link>
-                  </div>
+                  <Link to="/producto" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Tarjetas prepago para empresas
+                  </Link>
+                  <Link to="/producto" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Cuentas por pagar
+                  </Link>
+                  <Link to="/producto" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Transferencias bancarias
+                  </Link>
+                  <Link to="/reembolsos" className="block px-4 py-2 text-sm text-[#38424e] hover:bg-gray-100 hover:text-[#151515]">
+                    Reembolsos
+                  </Link>
                 </div>
               )}
             </div>
@@ -159,7 +127,7 @@ export function ReimbursementsPage() {
 
               {/* Left: Zapier-style wheel */}
               <div className="flex items-center justify-center lg:flex-1">
-                <div className="relative w-[265px] h-[265px] sm:w-[330px] sm:h-[330px] lg:w-[440px] lg:h-[440px]">
+                <div className="relative w-[285px] h-[285px] sm:w-[355px] sm:h-[355px] lg:w-[470px] lg:h-[470px] overflow-hidden mx-auto">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[440px] h-[440px] scale-[0.6] sm:scale-[0.75] lg:scale-100 origin-center">
 
                   {/* Static outer ring */}
@@ -499,7 +467,7 @@ export function ReimbursementsPage() {
             <h2 className="text-3xl font-bold mb-4">¡Prueba Cardda Hoy!</h2>
             <p className="text-xl mb-8">Simplifica tus reembolsos y enfócate en lo que importa.</p>
             <a href="https://www.cardda.com/onboarding" className="inline-block bg-white text-[#fa7210] px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
-              Crear Cuenta Gratuita
+              Crear Cuenta
             </a>
           </div>
         </section>
