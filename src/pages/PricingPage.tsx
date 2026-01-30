@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export function PricingPage() {
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white text-[#151515]">
@@ -13,8 +14,13 @@ export function PricingPage() {
           <Link to="/">
             <img src="/cardda-landing/logo.svg" alt="Cardda" className="h-18" />
           </Link>
+          <button className="md:hidden p-2 text-[#38424e] hover:text-[#151515]" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Abrir menú">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {isMobileMenuOpen ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
+            </svg>
+          </button>
           <div className="hidden md:flex items-center space-x-8">
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setIsProductDropdownOpen(true)}
               onMouseLeave={() => setIsProductDropdownOpen(false)}
@@ -23,7 +29,7 @@ export function PricingPage() {
                 Producto
               </Link>
               {isProductDropdownOpen && (
-                <div 
+                <div
                   className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50"
                   onMouseEnter={() => setIsProductDropdownOpen(true)}
                 >
@@ -59,6 +65,24 @@ export function PricingPage() {
             </a>
           </div>
         </div>
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
+            <div className="px-4 py-3 space-y-1">
+              <p className="px-3 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Producto</p>
+              <Link to="/producto" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#38424e] hover:bg-gray-100 rounded-lg">Tarjetas prepago para empresas</Link>
+              <Link to="/producto" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#38424e] hover:bg-gray-100 rounded-lg">Cuentas por pagar</Link>
+              <Link to="/producto" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#38424e] hover:bg-gray-100 rounded-lg">Transferencias bancarias</Link>
+              <Link to="/reembolsos" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#38424e] hover:bg-gray-100 rounded-lg">Reembolsos</Link>
+              <div className="border-t border-gray-200 my-2" />
+              <Link to="/clientes" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#38424e] hover:bg-gray-100 rounded-lg">Clientes</Link>
+              <Link to="/precios" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#38424e] hover:bg-gray-100 rounded-lg">Precios</Link>
+              <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-[#38424e] hover:bg-gray-100 rounded-lg">Blog</Link>
+              <div className="border-t border-gray-200 my-2" />
+              <a href="https://www.cardda.com/login" className="block px-3 py-2 text-sm text-[#38424e] hover:bg-gray-100 rounded-lg">Ingresar</a>
+              <a href="https://www.cardda.com/onboarding" className="block px-3 py-2 text-sm font-medium text-white bg-[#fa7210] hover:bg-[#e86609] rounded-lg text-center">Crear Cuenta</a>
+            </div>
+          </div>
+        )}
       </nav>
 
       <main className="pt-20">
